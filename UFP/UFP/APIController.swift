@@ -54,6 +54,12 @@ class APIController {
         makeRequest("grades/detailed", method: .get, params: params, completionHandler: completionHandler)
     }
     
+    open func getUserExamGrades(_ token: String, completionHandler: @escaping (JSON, Error?) -> ()) {
+        let params: Parameters = ["token": token]
+        
+        makeRequest("grades/exam", method: .get, params: params, completionHandler: completionHandler)
+    }
+    
     open func getQueueStatus(completionHandler: @escaping (JSON, Error?) -> ()) {
         let params: Parameters = [:]
         
