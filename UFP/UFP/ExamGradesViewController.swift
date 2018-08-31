@@ -50,8 +50,6 @@ class ExamGradesViewController: UIViewController, UITableViewDataSource, UITable
             } else {
             }
             
-            print(self.examGrades)
-            
             self.gradesTable.reloadData()
         })
     }
