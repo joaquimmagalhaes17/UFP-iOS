@@ -83,7 +83,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
                             room.append("\(value) & ")
                         }
                         
-                        self.events.append(Event(name: dayExam["subject"].stringValue + " - " + dayExam["typology"].stringValue, room: String(room.characters.dropLast(3)), date: self.dateFormatter.string(from: todayDate), startTime: dayExam["time"].stringValue, endTime: ""))
+                        self.events.append(Event(name: dayExam["subject"].stringValue + " - " + dayExam["typology"].stringValue, room: String(room.dropLast(3)), date: self.dateFormatter.string(from: todayDate), startTime: dayExam["time"].stringValue, endTime: ""))
                     }
                 }
                 
@@ -198,7 +198,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
                         room.append("\(value) & ")
                     }
                     
-                    self.events.append(Event(name: event["subject"].stringValue + " - " + event["typology"].stringValue, room: String(room.characters.dropLast(3)), date: self.dateFormatter.string(from: date), startTime: event["time"].stringValue, endTime: ""))
+                    self.events.append(Event(name: event["subject"].stringValue + " - " + event["typology"].stringValue, room: String(room.dropLast(3)), date: self.dateFormatter.string(from: date), startTime: event["time"].stringValue, endTime: ""))
                 } else {
                     self.events.append(Event(name: event["unidade"].stringValue, room: event["sala"].stringValue, date: self.dateFormatter.string(from: date), startTime: event["inicio"].stringValue, endTime: event["termo"].stringValue))
                 }

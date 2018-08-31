@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController
         
         self.pageViewController.view.frame = CGRect(x: 0, y: 57, width: self.view.frame.width, height: self.view.frame.height - 57)
         
